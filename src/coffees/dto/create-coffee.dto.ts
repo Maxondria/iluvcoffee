@@ -7,7 +7,7 @@ export class CreateCoffeeDto {
   @IsString()
   readonly brand: string;
 
-  @ArrayNotEmpty()
+  // @ArrayNotEmpty()
   @IsString({ each: true })
   readonly flavors: string[];
 }
