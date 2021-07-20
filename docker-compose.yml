@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:11.5-alpine
+    restart: always
+    ports:
+      - '5433:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: pass123
+    volumes:
+      - postgresql:/var/lib/postgresql
+
+volumes:
+  postgresql:
