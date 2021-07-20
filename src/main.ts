@@ -24,6 +24,9 @@ async function bootstrap() {
        * from strings to correct types.
        */
       transform: true,
+      transformOptions: {
+        enableImplicitConversion: true,
+      },
     }),
   );
   await app.listen(3000);
